@@ -90,12 +90,12 @@ const MortgageCalculator = () => {
     <div className=" rounded-xl p-7  md:flex md:flex-row flex flex-col justify-center md:w-[1000px] my-10 mx-auto">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-white p-7 rounded-tl-lg rounded-bl-lg w-full md:w-auto"
+        className="bg-white p-7 rounded-t-lg md:rounded-tl-lg md:rounded-bl-lg w-full md:w-auto"
       >
         <div className="flex justify-between">
-          <h1>Mortgage Calculator</h1>
+          <h1 className="font-bold lg:text-xl">Mortgage Calculator</h1>
           <button type="button" onClick={handleReset}>
-            <p className="underline">Clear all</p>
+            <p className="underline text-xs text-sky-200">Clear all</p>
           </button>
         </div>
 
@@ -226,7 +226,7 @@ const MortgageCalculator = () => {
 
       {showResult ? (
         <div>
-          <div className="bg-sky-950 h-full text-center md:rounded-bl-3xl md:rounded-br-lg md:rounded-tr-lg md:relative right-4 flex flex-col gap-3 text-white p-3 justify-center items-center">
+          <div className="bg-sky-950 h-full text-center rounded-b-lg md:rounded-bl-3xl md:rounded-br-lg md:rounded-tr-lg md:relative right-4 flex flex-col gap-3 text-white p-3 justify-center items-center">
             <div className="">
               <h2 className="text-l font-bold text-white my-3">Your results</h2>
               <p className="text-xs text-slate-300">
@@ -251,7 +251,7 @@ const MortgageCalculator = () => {
           </div>
         </div>
       ) : (
-        <div className="bg-sky-950 w-full md:w-[50%] text-center md:rounded-bl-3xl md:rounded-br-lg md:rounded-tr-lg  md:relative right-4 flex flex-col gap-3 text-white p-6 md:p-3 justify-center items-center">
+        <div className="bg-sky-950 w-full md:w-[50%] text-center rounded-b-lg md:rounded-bl-3xl md:rounded-br-lg md:rounded-tr-lg  md:relative right-4 flex flex-col gap-3 text-white p-6 md:p-3 justify-center items-center">
           <img src={calculatorimg} className="w-40 h-f" alt="" />
           <h2 className="font-bold text-xl">Results shown here</h2>
           <p className="text-xs">
